@@ -33,7 +33,7 @@ router.post('/', function (req, res) {
 
 // Update a project throught its id
 router.put('/:id', function (req, res) {
-    Project.findByIdAndUpdate(req.params.id, req.body, function (err, projectinfo){
+    Project.findByIdAndUpdate(req.params.id, req.body, function (err, project_info){
 	if (err) res.status(500).send(err);
 	else res.sendStatus(200);
     });
